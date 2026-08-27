@@ -4,7 +4,7 @@
     <!-- ★ PHOTO DE PROFIL ★ -->
     <div class="profile-wrapper d-inline-block mb-4">
       <img id="profilePhoto"
-           src="images/profil.jpg"
+           src="images/profil_pro.png"
            alt="Photo de profil"
            class="profile-photo"/>
       <!-- <label class="photo-upload-btn" for="photoInput" title="Changer la photo">
@@ -22,10 +22,10 @@
       Étudiant en Master GDIL à l'Université Gaston Berger — passionné par le développement logiciel, les systèmes distribués et les bases de données.
     </p>
     <div class="d-flex flex-wrap gap-3 justify-content-center mb-5">
-      <a href="#projets" class="btn btn-primary btn-lg rounded-pill px-5 fw-semibold shadow">
+      <a href="#projets" (click)="scrollTo('projets', $event)" class="btn btn-primary btn-lg rounded-pill px-5 fw-semibold shadow">
         Voir mes projets <i class="bi bi-arrow-down ms-2"></i>
       </a>
-      <a href="#contact" class="btn btn-outline-secondary btn-lg rounded-pill px-5 fw-semibold">
+      <a href="#contact" (click)="scrollTo('contact', $event)" class="btn btn-outline-secondary btn-lg rounded-pill px-5 fw-semibold">
         Me contacter <i class="bi bi-envelope ms-2"></i>
       </a>
     </div>

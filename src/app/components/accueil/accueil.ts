@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-accueil',
@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './accueil.css',
 })
 export class Accueil {
-
+  @Input() scrollTo!: (sectionId: string, event: Event) => void;
 }

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md fixed-top py-3" id="navbar">
+<nav class="navbar navbar-expand-md fixed-top py-1" id="navbar">
   <div class="container">
     <a class="navbar-brand fw-bold fs-4 gradient-text" href="#" (click)="scrollTo('accueil', $event)">Portfolio.</a>
     <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
@@ -35,7 +35,11 @@
           </a>
         </li>
         <li class="nav-item ms-md-2">
-          <a class="btn btn-primary rounded-pill px-4 fw-semibold" href="#contact"><i class="bi bi-telephone-fill"></i> Contact</a>
+          <a class="btn btn-primary rounded-pill px-4 fw-semibold" href="#contact"
+              (click)="scrollTo('contact', $event)">
+            <i class="bi bi-telephone-fill"></i>
+            Contact
+          </a>
         </li>
       </ul>
     </div>
@@ -43,7 +47,7 @@
 </nav>
 
 <!-- ACCUEIL -->
-<app-accueil />
+<app-accueil [scrollTo]="scrollTo.bind(this)" />
 
 <!-- A PROPOS -->
 <app-apropos />
@@ -56,6 +60,5 @@
 
 <!-- CONTACT -->
 <app-contact />
-
 
 <app-footer />
