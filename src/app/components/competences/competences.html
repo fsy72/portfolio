@@ -1,89 +1,87 @@
-<section id="competences" class="py-5 bg-white">
-  <div class="container py-5">
-    <div class="text-center mb-5">
+<section id="competences" class="py-16 bg-white">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="text-center mb-12">
       <p class="section-eyebrow">Expertise</p>
-      <h2 class="fw-bold fs-1 mb-3" style="color:var(--secondary)">Mes compétences</h2>
-      <p class="text-muted mx-auto" style="max-width:520px">Langages, frameworks et outils maîtrisés à travers les projets universitaires et la pratique personnelle</p>
+      <h2 class="font-bold text-5xl mb-3" style="color:var(--secondary)">Mes compétences</h2>
+      <p class="text-gray-500 mx-auto max-w-lg">Langages, frameworks et outils maîtrisés à travers les projets universitaires et la pratique personnelle</p>
     </div>
 
-    <div class="row g-5 mb-5">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-12">
       <!-- Langages système -->
-       <div class="col-lg-6">
-        <h4 class="fw-bold mb-4 d-flex align-items-center gap-2" style="color:var(--secondary)">
-          <i class="bi bi-braces text-primary"></i> Langages
+      <div>
+        <h4 class="font-bold mb-4 flex items-center gap-2" style="color:var(--secondary)">
+          <i class="bi bi-braces text-[var(--primary)]"></i> Langages
         </h4>
-        <div class="d-flex flex-column gap-3">
+        <div class="flex flex-col gap-4">
           <div *ngFor="let langage of langages">
-            <div class="d-flex justify-content-between mb-1"><span class="fw-medium">{{ langage.competence }}</span><span class="fw-semibold text-primary">{{ getNiveau(langage.niveau) }} · {{ langage.niveau }}%</span></div>
-            <div class="progress"><div class="progress-bar bg-primary skill-bar" style="width:{{ langage.niveau }}%"></div></div>
+            <div class="flex justify-between mb-1"><span class="font-medium">{{ langage.competence }}</span><span class="font-semibold text-[var(--primary)]">{{ getNiveau(langage.niveau) }} · {{ langage.niveau }}%</span></div>
+            <div class="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
+              <div class="skill-bar h-full bg-[var(--primary)] rounded-full" [style.width.%]="langage.niveau"></div>
+            </div>
           </div>
         </div>
       </div>
 
       <!-- Web & outils -->
-      <div class="col-lg-6">
-        <h4 class="fw-bold mb-4 d-flex align-items-center gap-2" style="color:var(--secondary)">
+      <div>
+        <h4 class="font-bold mb-4 flex items-center gap-2" style="color:var(--secondary)">
           <i class="bi bi-globe" style="color:var(--accent)"></i> Web &amp; Outils
         </h4>
-        <div class="d-flex flex-column gap-3">
+        <div class="flex flex-col gap-4">
           <div *ngFor="let wo of webOutils">
-            <div class="d-flex justify-content-between mb-1"><span class="fw-medium">{{ wo.competence }}</span><span class="fw-semibold" style="color:var(--accent)">{{ getNiveau(wo.niveau) }} · {{ wo.niveau }}%</span></div>
-            <div class="progress"><div class="progress-bar skill-bar" style="width:{{ wo.niveau }}%;background:var(--accent)"></div></div>
+            <div class="flex justify-between mb-1"><span class="font-medium">{{ wo.competence }}</span><span class="font-semibold" style="color:var(--accent)">{{ getNiveau(wo.niveau) }} · {{ wo.niveau }}%</span></div>
+            <div class="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
+              <div class="skill-bar h-full rounded-full" style="background:var(--accent)" [style.width.%]="wo.niveau"></div>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
     <!-- Tech Stack Icons -->
-    <div class="tech-grid mb-5">
-      <div class="row row-cols-4 row-cols-md-8 g-4 justify-content-center">
-        <div class="col"><div class="tech-item"><i class="bi bi-filetype-html text-danger"></i>HTML5</div></div>
-        <div class="col"><div class="tech-item"><i class="bi bi-filetype-css text-primary"></i>CSS3</div></div>
-        <div class="col"><div class="tech-item"><i class="bi bi-filetype-js text-warning"></i>JS</div></div>
-        <div class="col"><div class="tech-item"><i class="bi bi-filetype-php" style="color:var(--accent)"></i>PHP</div></div>
-        <div class="col"><div class="tech-item"><i class="bi bi-server text-success"></i>Node.js</div></div>
-        <div class="col"><div class="tech-item"><i class="bi bi-database text-primary"></i>MySQL</div></div>
-        <div class="col"><div class="tech-item"><i class="bi bi-git text-danger"></i>Git</div></div>
-        <div class="col"><div class="tech-item"><i class="bi bi-terminal text-secondary"></i>Linux</div></div>
+    <div class="tech-grid mb-12">
+      <div class="grid grid-cols-4 md:grid-cols-8 gap-4 justify-items-center">
+        <div class="tech-item"><i class="bi bi-filetype-html text-red-500"></i>HTML5</div>
+        <div class="tech-item"><i class="bi bi-filetype-css text-blue-500"></i>CSS3</div>
+        <div class="tech-item"><i class="bi bi-filetype-js text-amber-500"></i>JS</div>
+        <div class="tech-item"><i class="bi bi-filetype-php" style="color:var(--accent)"></i>PHP</div>
+        <div class="tech-item"><i class="bi bi-server text-emerald-500"></i>Node.js</div>
+        <div class="tech-item"><i class="bi bi-database text-blue-500"></i>MySQL</div>
+        <div class="tech-item"><i class="bi bi-git text-red-500"></i>Git</div>
+        <div class="tech-item"><i class="bi bi-terminal text-gray-500"></i>Linux</div>
       </div>
     </div>
 
     <!-- Bases de données -->
-    <div class="row g-3 justify-content-center mb-5">
-      <div class="col-12 text-center mb-2">
-        <h6 class="fw-bold text-muted text-uppercase" style="letter-spacing:.1em;font-size:.78rem">Bases de données</h6>
+    <div class="flex flex-wrap gap-3 justify-center mb-12">
+      <div class="w-full text-center mb-2">
+        <h6 class="font-bold text-gray-500 uppercase tracking-widest text-xs">Bases de données</h6>
       </div>
-      <div class="col-auto"><span class="badge bg-primary bg-opacity-10 text-primary fs-6 px-4 py-2 rounded-pill">MySQL</span></div>
-      <div class="col-auto"><span class="badge bg-success bg-opacity-10 text-success fs-6 px-4 py-2 rounded-pill">PostgreSQL</span></div>
-      <div class="col-auto"><span class="badge bg-success bg-opacity-10 text-success fs-6 px-4 py-2 rounded-pill">Oracle</span></div>
-      <div class="col-auto"><span class="badge bg-secondary bg-opacity-10 text-secondary fs-6 px-4 py-2 rounded-pill">SQLite</span></div>
+      <span class="bg-[var(--primary)]/10 text-[var(--primary)] text-base font-medium px-6 py-2 rounded-full">MySQL</span>
+      <span class="bg-emerald-500/10 text-emerald-600 text-base font-medium px-6 py-2 rounded-full">PostgreSQL</span>
+      <span class="bg-emerald-500/10 text-emerald-600 text-base font-medium px-6 py-2 rounded-full">Oracle</span>
+      <span class="bg-gray-200/60 text-gray-600 text-base font-medium px-6 py-2 rounded-full">SQLite</span>
     </div>
 
     <!-- Langues -->
-    <div class="row g-3 justify-content-center">
-      <div class="col-12 text-center mb-2">
-        <h6 class="fw-bold text-muted text-uppercase" style="letter-spacing:.1em;font-size:.78rem">Langues</h6>
+    <div class="flex flex-wrap gap-3 justify-center">
+      <div class="w-full text-center mb-2">
+        <h6 class="font-bold text-gray-500 uppercase tracking-widest text-xs">Langues</h6>
       </div>
-      <div class="col-auto">
-        <div class="lang-pill">
-          <span class="lang-flag">🇸🇳</span>
-          <span class="lang-name">Wolof</span>
-          <span class="lang-level">Langue maternelle</span>
-        </div>
+      <div class="lang-pill">
+        <span class="lang-flag">🇸🇳</span>
+        <span class="lang-name">Wolof</span>
+        <span class="lang-level">Langue maternelle</span>
       </div>
-      <div class="col-auto">
-        <div class="lang-pill">
-          <span class="lang-flag">🇫🇷</span>
-          <span class="lang-name">Français</span>
-          <span class="lang-level">Courant</span>
-        </div>
+      <div class="lang-pill">
+        <span class="lang-flag">🇫🇷</span>
+        <span class="lang-name">Français</span>
+        <span class="lang-level">Courant</span>
       </div>
-      <div class="col-auto">
-        <div class="lang-pill">
-          <span class="lang-flag">🇬🇧</span>
-          <span class="lang-name">Anglais</span>
-          <span class="lang-level">Technique</span>
-        </div>
+      <div class="lang-pill">
+        <span class="lang-flag">🇬🇧</span>
+        <span class="lang-name">Anglais</span>
+        <span class="lang-level">Technique</span>
       </div>
     </div>
   </div>

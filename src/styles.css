@@ -1,4 +1,4 @@
-/* @import "tailwindcss"; */
+@import "tailwindcss";
 
 :root {
   --primary: #3B82F6;
@@ -344,3 +344,4 @@ footer {
   padding: .35rem .75rem;
   border-radius: 100px;
 }
+

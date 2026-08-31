@@ -1,8 +1,8 @@
 <section id="accueil">
-  <div class="container text-center py-3">
+  <div class="max-w-6xl mx-auto px-4 text-center py-16">
 
     <!-- ★ PHOTO DE PROFIL ★ -->
-    <div class="profile-wrapper d-inline-block mb-4">
+    <div class="profile-wrapper inline-block mb-6">
       <img id="profilePhoto"
            src="images/profil_pro.png"
            alt="Photo de profil"
@@ -13,27 +13,27 @@
       <input type="file" id="photoInput" accept="image/*"/> -->
     </div>
 
-    <p class="section-eyebrow mb-3 text-uppercase ls-wide">Bonjour, je suis</p>
-    <h1 class="display-3 fw-bold lh-1 mb-4" style="color:var(--secondary)">
+    <p class="section-eyebrow mb-3 uppercase tracking-widest">Bonjour, je suis</p>
+    <h1 class="text-5xl md:text-7xl font-bold leading-none mb-4" style="color:var(--secondary)">
       Fallou <span class="gradient-text">SY</span>
     </h1>
-    <p class="fs-4 fw-semibold text-muted mb-2">Développeur Full-Stack &amp; Ingénieur Logiciel</p>
-    <p class="lead text-muted mb-5 mx-auto" style="max-width:580px">
-      Étudiant en Master GDIL à l'Université Gaston Berger — passionné par le développement logiciel, les systèmes distribués et les bases de données.
+    <p class="text-2xl font-semibold text-gray-500 mb-2">Développeur Full-Stack &amp; Ingénieur Logiciel</p>
+    <p class="text-lg text-gray-500 mb-10 mx-auto max-w-xl">
+      Étudiant en Master 2 GDIL à l'Université Gaston Berger, je viens de réaliser un stage de trois mois au CCOS et m'apprête à y débuter un CDD.
     </p>
-    <div class="d-flex flex-wrap gap-3 justify-content-center mb-5">
-      <a href="#projets" (click)="scrollTo('projets', $event)" class="btn btn-primary btn-lg rounded-pill px-5 fw-semibold shadow">
-        Voir mes projets <i class="bi bi-arrow-down ms-2"></i>
+    <div class="flex flex-wrap gap-3 justify-center mb-10">
+      <a href="#projets" (click)="scrollTo('projets', $event)" class="inline-flex items-center bg-[var(--primary)] text-white text-lg rounded-full px-8 py-3 font-semibold shadow-lg hover:opacity-90 transition">
+        Voir mes projets <i class="bi bi-arrow-down ml-2"></i>
       </a>
-      <a href="#contact" (click)="scrollTo('contact', $event)" class="btn btn-outline-secondary btn-lg rounded-pill px-5 fw-semibold">
-        Me contacter <i class="bi bi-envelope ms-2"></i>
+      <a href="#contact" (click)="scrollTo('contact', $event)" class="inline-flex items-center border border-gray-400 text-gray-700 text-lg rounded-full px-8 py-3 font-semibold hover:bg-gray-50 transition">
+        Me contacter <i class="bi bi-envelope ml-2"></i>
       </a>
     </div>
-    <div class="d-flex justify-content-center gap-4">
-      <a href="#" class="text-secondary fs-5 text-decoration-none"><i class="bi bi-github"></i></a>
-      <a href="#" class="text-secondary fs-5 text-decoration-none"><i class="bi bi-linkedin"></i></a>
-      <a href="#" class="text-secondary fs-5 text-decoration-none"><i class="bi bi-twitter-x"></i></a>
-      <a href="#" class="text-secondary fs-5 text-decoration-none"><i class="bi bi-dribbble"></i></a>
+    <div class="flex justify-center gap-6">
+      <a href="#" class="text-gray-600 hover:text-[var(--primary)] text-xl transition-colors"><i class="bi bi-github"></i></a>
+      <a href="#" class="text-gray-600 hover:text-[var(--primary)] text-xl transition-colors"><i class="bi bi-linkedin"></i></a>
+      <a href="#" class="text-gray-600 hover:text-[var(--primary)] text-xl transition-colors"><i class="bi bi-twitter-x"></i></a>
+      <a href="#" class="text-gray-600 hover:text-[var(--primary)] text-xl transition-colors"><i class="bi bi-dribbble"></i></a>
     </div>
   </div>
 </section>

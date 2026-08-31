@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component, HostListener } from '@angular/core';
 import { Footer } from '../components/footer/footer';
 import { Accueil } from "../components/accueil/accueil";
@@ -9,6 +10,7 @@ import { Contact } from "../components/contact/contact";
 @Component({
   selector: 'app-portfolio',
   imports: [
+    CommonModule,
     Accueil,
     Apropos,
     Projets,

@@ -1,47 +1,58 @@
-<nav class="navbar navbar-expand-md fixed-top py-1" id="navbar">
-  <div class="container">
-    <a class="navbar-brand fw-bold fs-4 gradient-text" href="#" (click)="scrollTo('accueil', $event)">Portfolio.</a>
-    <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-      <i class="bi bi-list fs-3 text-dark"></i>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navMenu">
-      <ul class="navbar-nav gap-2 align-items-md-center">
-        <li class="nav-item">
-          <a class="nav-link px-2" href="#accueil"
-              [class.active]="isNavActive('accueil')"
-              (click)="scrollTo('accueil', $event)">
-            Accueil
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link px-2" href="#apropos"
-              [class.active]="isNavActive('apropos')"
-              (click)="scrollTo('apropos', $event)">
-            À propos
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link px-2" href="#projets"
-              [class.active]="isNavActive('projets')"
-              (click)="scrollTo('projets', $event)">
-            Projets
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link px-2" href="#competences"
-              [class.active]="isNavActive('competences')"
-              (click)="scrollTo('competences', $event)">
-            Compétences
-          </a>
-        </li>
-        <li class="nav-item ms-md-2">
-          <a class="btn btn-primary rounded-pill px-4 fw-semibold" href="#contact"
-              (click)="scrollTo('contact', $event)">
-            <i class="bi bi-telephone-fill"></i>
-            Contact
-          </a>
-        </li>
-      </ul>
+<nav id="navbar" class="fixed top-0 inset-x-0 z-50 py-1 bg-white/90 backdrop-blur-sm shadow-sm">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="flex items-center justify-between h-16">
+      <a class="font-bold text-2xl gradient-text" href="#" (click)="scrollTo('accueil', $event)">Portfolio.</a>
+
+      <!-- Toggle mobile (CSS only, remplace le JS de Bootstrap) -->
+      <input type="checkbox" id="nav-toggle" class="peer hidden" />
+      <label for="nav-toggle" class="md:hidden cursor-pointer p-2 text-gray-900">
+        <i class="bi bi-list text-3xl"></i>
+      </label>
+
+      <div class="hidden peer-checked:flex md:flex flex-col md:flex-row absolute md:static top-full left-0 w-full md:w-auto bg-white md:bg-transparent shadow-lg md:shadow-none px-4 md:px-0 py-4 md:py-0">
+        <ul class="flex flex-col md:flex-row gap-2 md:items-center w-full md:w-auto">
+          <li>
+            <a class="block px-2 py-2 md:py-0 transition-colors"
+                [ngClass]="isNavActive('accueil') ? 'text-[var(--primary)] font-semibold' : 'text-gray-700 hover:text-[var(--primary)]'"
+                href="#accueil"
+                (click)="scrollTo('accueil', $event)">
+              Accueil
+            </a>
+          </li>
+          <li>
+            <a class="block px-2 py-2 md:py-0 transition-colors"
+                [ngClass]="isNavActive('apropos') ? 'text-[var(--primary)] font-semibold' : 'text-gray-700 hover:text-[var(--primary)]'"
+                href="#apropos"
+                (click)="scrollTo('apropos', $event)">
+              À propos
+            </a>
+          </li>
+          <li>
+            <a class="block px-2 py-2 md:py-0 transition-colors"
+                [ngClass]="isNavActive('projets') ? 'text-[var(--primary)] font-semibold' : 'text-gray-700 hover:text-[var(--primary)]'"
+                href="#projets"
+                (click)="scrollTo('projets', $event)">
+              Projets
+            </a>
+          </li>
+          <li>
+            <a class="block px-2 py-2 md:py-0 transition-colors"
+                [ngClass]="isNavActive('competences') ? 'text-[var(--primary)] font-semibold' : 'text-gray-700 hover:text-[var(--primary)]'"
+                href="#competences"
+                (click)="scrollTo('competences', $event)">
+              Compétences
+            </a>
+          </li>
+          <li class="md:ml-2">
+            <a class="inline-flex items-center gap-2 bg-[var(--primary)] text-white rounded-full px-4 py-2 font-semibold hover:opacity-90 transition"
+                href="#contact"
+                (click)="scrollTo('contact', $event)">
+              <i class="bi bi-telephone-fill"></i>
+              Contact
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </nav>
