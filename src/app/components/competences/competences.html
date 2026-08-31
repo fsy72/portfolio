@@ -10,13 +10,13 @@
       <!-- Langages système -->
       <div>
         <h4 class="font-bold mb-4 flex items-center gap-2" style="color:var(--secondary)">
-          <i class="bi bi-braces text-[var(--primary)]"></i> Langages
+          <i class="bi bi-braces text-primary"></i> Langages
         </h4>
         <div class="flex flex-col gap-4">
           <div *ngFor="let langage of langages">
-            <div class="flex justify-between mb-1"><span class="font-medium">{{ langage.competence }}</span><span class="font-semibold text-[var(--primary)]">{{ getNiveau(langage.niveau) }} · {{ langage.niveau }}%</span></div>
+            <div class="flex justify-between mb-1"><span class="font-medium">{{ langage.competence }}</span><span class="font-semibold text-primary">{{ getNiveau(langage.niveau) }} · {{ langage.niveau }}%</span></div>
             <div class="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
-              <div class="skill-bar h-full bg-[var(--primary)] rounded-full" [style.width.%]="langage.niveau"></div>
+              <div class="skill-bar h-full bg-primary rounded-full" [style.width.%]="langage.niveau"></div>
             </div>
           </div>
         </div>
@@ -57,7 +57,7 @@
       <div class="w-full text-center mb-2">
         <h6 class="font-bold text-gray-500 uppercase tracking-widest text-xs">Bases de données</h6>
       </div>
-      <span class="bg-[var(--primary)]/10 text-[var(--primary)] text-base font-medium px-6 py-2 rounded-full">MySQL</span>
+      <span class="bg-primary/10 text-primary text-base font-medium px-6 py-2 rounded-full">MySQL</span>
       <span class="bg-emerald-500/10 text-emerald-600 text-base font-medium px-6 py-2 rounded-full">PostgreSQL</span>
       <span class="bg-emerald-500/10 text-emerald-600 text-base font-medium px-6 py-2 rounded-full">Oracle</span>
       <span class="bg-gray-200/60 text-gray-600 text-base font-medium px-6 py-2 rounded-full">SQLite</span>
