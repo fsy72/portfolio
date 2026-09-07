@@ -24,7 +24,7 @@ export class Competences {
     { 'competence':'Spring boot', 'niveau':70 },
     { 'competence':'PHP / Laravel', 'niveau':90 },
     { 'competence':'Node.js / Socket.IO', 'niveau':70 },
-    { 'competence':'React / Angular / jQuery', 'niveau':75 },
+    { 'competence':'React / Angular / jQuery', 'niveau':80 },
     { 'competence':'Git / Linux / VS Code', 'niveau':82 },
   ];
 
