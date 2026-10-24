@@ -10,20 +10,20 @@ import { Component } from '@angular/core';
 export class Projets {
   readonly projets = [
     {
-      'nameProject':'E-Commerce Platform',
-      'image':'img1.jpg',
+      'nameProject':'FieldTask Pro',
+      'image':'fieldtask_pro.svg',
       'hrefExplore':'#',
-      'hrefGithub':'#',
-      'description':'Plateforme e-commerce complète avec paiement intégré et dashboard admin.',
-      'outils':[ 'Node.js', 'MongoDB', 'React' ]
+      'hrefGithub':'https://github.com/fsy72/fieldtask-pro.git',
+      'description':'FieldTask Pro est le prototype d\'une application mobile cross-platform destinée aux techniciens itinérants de TechFix.',
+      'outils':[ 'Laravel', 'Flutter' ]
     },
     {
-      'nameProject':'Task Management App',
-      'image':'anime5.png',
+      'nameProject':'Projets Tutorés',
+      'image':'projets_tutores.png',
       'hrefExplore':'#',
-      'hrefGithub':'#',
-      'description':'Application de gestion de tâches collaborative avec temps réel.',
-      'outils':[ 'Vue.js', 'Firebase', 'Tailwind' ]
+      'hrefGithub':'https://github.com/fsy72/projets_tutores.git',
+      'description':'Application web de gestion des projets tutorés. Elle permet aux enseignants de proposer des sujets, aux étudiants de candidater, et au responsable pédagogique d\'accepter ou de rejeter les candidatures. ',
+      'outils':[ 'Spring Boot', 'Angular' ]
     },
     {
       'nameProject':'Analytics Dashboard',
