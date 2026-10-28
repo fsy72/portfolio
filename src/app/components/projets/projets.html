@@ -7,14 +7,13 @@
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <!-- Projets -->
       <div *ngFor="let projet of projets" class="card-hover bg-white rounded-xl shadow-sm overflow-hidden flex flex-col">
         <div class="project-img-wrap">
-          <img src="images/{{ projet.image }}" alt="Projet 1"/>
+          <img [src]="projet.image" [alt]="projet.nameProject"/>
           <div class="project-overlay">
             <div>
-              <a href="{{ projet.hrefExplore }}" class="bg-white rounded-full me-3 p-2 shadow hover:bg-gray-100 transition"><i class="bi bi-box-arrow-up-right"></i></a>
-              <a href="{{ projet.hrefGithub }}" class="bg-white rounded-full p-2 shadow hover:bg-gray-100 transition"><i class="bi bi-github"></i></a>
+              <a *ngIf="projet.hrefExplore !== '#'" [href]="projet.hrefExplore" target="_blank" rel="noopener noreferrer" [attr.aria-label]="'Ouvrir le projet ' + projet.nameProject" class="bg-white rounded-full me-3 p-2 shadow hover:bg-gray-100 transition"><i class="bi bi-box-arrow-up-right"></i></a>
+              <a [href]="projet.hrefGithub" target="_blank" rel="noopener noreferrer" [attr.aria-label]="'Voir le code de ' + projet.nameProject" class="bg-white rounded-full p-2 shadow hover:bg-gray-100 transition"><i class="bi bi-github"></i></a>
             </div>
           </div>
         </div>
