@@ -5,8 +5,9 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --output-path=dist --base-href /portfolio/",
-    "pages": "npx angular-cli-ghpages --dir=dist/browser",
+    "build:gh-pages": "ng build --output-path=dist --base-href /portfolio/",
     "build:cloudflare": "ng build --output-path=dist --base-href /",
+    "pages": "npx angular-cli-ghpages --dir=dist/browser",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
