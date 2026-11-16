@@ -1,4 +1,4 @@
 export const environment = {
-  supabaseUrl: 'https://TON-PROJET.supabase.co',
-  supabaseAnonKey: 'TA_CLE_ANON',
+  supabaseUrl: 'https://vihgolpsoemhpsvazqvz.supabase.co',
+  supabaseAnonKey: 'sb_publishable_DtP9oxuuyiVUJZWcoqJNpA_T97B7Pby',
 };
